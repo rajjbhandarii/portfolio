@@ -142,7 +142,7 @@ header {
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 100%;
   padding: 0 20px;
   #h1-1 {
     color: rgb(126, 234, 146);
