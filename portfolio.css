@@ -130,7 +130,7 @@ header {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  height: fit-content;
   display: flex;
   width: 100%;
   background: #070427;
@@ -155,21 +155,15 @@ header {
 
 .hero-img {
   display: flex;
+  padding: 1rem;
   justify-content: center;
   align-items: center;
-
+  width: 40%;
   img {
-    padding-right: 1rem;
-    border: white solid 2px;
-    padding-top: 3rem;
-    padding-left: 1rem;
-    background-color: rgb(255 254 1 / 96%);
-    box-shadow: 0 4px 8px rgb(255, 255, 255);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-
-    width: 100%;
+    width: 80%;
     border-radius: 50%;
   }
 }
@@ -185,26 +179,6 @@ header {
     color: rgb(61, 106, 255);
   }
 }
-
-/* .btn {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.btn:hover {
-  background-color: #2980b9;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-} */
 
 .cnt-btn {
   position: relative;
@@ -689,7 +663,7 @@ footer {
     flex-direction: column-reverse;
     justify-content: space-evenly;
     padding: 5rem 0;
-    height: 100vh;
+    height: fit-content;
   }
 
   .hero-content {
@@ -701,23 +675,20 @@ footer {
     }
   }
   .hero-img {
-    /* border: yellow solid 2px; */
+    border: yellow solid 2px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     padding: 1rem;
-    height: fit-content;
+    height: 100%;
     width: 100%;
     img {
-      padding-right: 1rem;
       padding: 0;
       border: none;
       box-shadow: none;
       background-repeat: no-repeat;
       background-size: cover;
       height: 100%;
-
-      width: 95%;
+      width: 100%;
       border-radius: 50%;
     }
   }
