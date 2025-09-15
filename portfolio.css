@@ -675,7 +675,6 @@ footer {
     }
   }
   .hero-img {
-    border: yellow solid 2px;
     display: flex;
     flex-direction: column;
     padding: 1rem;
