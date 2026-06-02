@@ -1,0 +1,44 @@
+import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-contact',
+  imports: [FormsModule, CommonModule],
+  templateUrl: './contact.html',
+  styleUrl: './contact.css'
+})
+export class Contact {
+  formData = {
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  };
+
+  isSubmitting = signal(false);
+  isSubmitted = signal(false);
+  hasError = signal(false);
+
+  contactInfo = [
+    { icon: '📧', label: 'Email', value: 'bhandariiiraj@gmail.com', href: 'mailto:raj@example.com' },
+  ];
+
+  async onSubmit() {
+    if (this.isSubmitting()) return;
+    this.isSubmitting.set(true);
+    this.hasError.set(false);
+
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1800));
+
+    this.isSubmitting.set(false);
+    this.isSubmitted.set(true);
+
+    // Reset form
+    this.formData = { name: '', email: '', subject: '', message: '' };
+
+    // Reset success message after 4s
+    setTimeout(() => this.isSubmitted.set(false), 4000);
+  }
+}

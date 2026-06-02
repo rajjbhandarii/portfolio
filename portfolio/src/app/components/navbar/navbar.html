@@ -1,0 +1,44 @@
+<nav class="navbar" [class.scrolled]="isScrolled()">
+  <div class="nav-container">
+    <!-- Logo -->
+    <a class="nav-logo" href="#home" (click)="scrollTo('#home', $event)">
+      <span class="logo-icon">RB</span>
+      <span class="logo-text">Raj<strong>Bhandari</strong></span>
+    </a>
+
+    <!-- Desktop Links -->
+    <ul class="nav-links">
+      @for (link of navLinks; track link.label) {
+        <li>
+          <a [href]="link.href" (click)="scrollTo(link.href, $event)" class="nav-link">
+            {{ link.label }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <!-- CTA -->
+    <a href="#contact" class="nav-cta" (click)="scrollTo('#contact', $event)">
+      Hire Me
+    </a>
+
+    <!-- Hamburger -->
+    <button class="hamburger" [class.open]="menuOpen()" (click)="toggleMenu()" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.open]="menuOpen()">
+    @for (link of navLinks; track link.label) {
+      <a [href]="link.href" (click)="scrollTo(link.href, $event)" class="mobile-link">
+        {{ link.label }}
+      </a>
+    }
+    <a href="#contact" class="btn btn-primary mobile-cta" (click)="scrollTo('#contact', $event)">
+      Hire Me
+    </a>
+  </div>
+</nav>
