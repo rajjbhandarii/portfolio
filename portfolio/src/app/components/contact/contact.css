@@ -31,13 +31,19 @@
 }
 
 /* Grid Layout */
-.contact-grid {
+/* .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 64px;
   align-items: start;
   position: relative;
   z-index: 1;
+} */
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .social-links {
   display: flex;
@@ -199,8 +205,14 @@
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Form */
@@ -300,7 +312,9 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 968px) {

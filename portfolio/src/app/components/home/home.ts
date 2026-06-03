@@ -18,7 +18,11 @@ export class Home {
   }
 
   downloadResume() {
-    // Placeholder for resume download
-    // alert('Resume download would be triggered here!');
+    const link = document.createElement('a');
+    link.href = 'assets/resume.pdf';
+    link.download = 'resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 }

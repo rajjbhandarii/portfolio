@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contact.css'
 })
 export class Contact {
+
+  http = inject(HttpClient);
+
   formData = {
     name: '',
     email: '',
@@ -30,7 +34,23 @@ export class Contact {
     this.hasError.set(false);
 
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1800));
+    try {
+      this.http.post('/api/contact', this.formData).subscribe({
+        next: () => {
+          this.isSubmitting.set(false);
+          this.isSubmitted.set(true);
+          this.formData = { name: '', email: '', subject: '', message: '' };
+          setTimeout(() => this.isSubmitted.set(false), 4000);
+        },
+        error: () => {
+          this.isSubmitting.set(false);
+          this.hasError.set(true);
+        }
+      });
+    } catch {
+      this.isSubmitting.set(false);
+      this.hasError.set(true);
+    }
 
     this.isSubmitting.set(false);
     this.isSubmitted.set(true);
