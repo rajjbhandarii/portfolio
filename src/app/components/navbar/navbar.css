@@ -15,6 +15,7 @@
   padding: 14px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.3);
+  max-height: 70px;
 }
 
 .nav-container {
@@ -162,7 +163,7 @@
 
 /* Mobile Menu */
 .mobile-menu {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 16px 24px 24px;
@@ -171,11 +172,15 @@
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.4s ease;
+  visibility: hidden;
+  transition:
+    max-height 0.4s ease,
+    visibility 0.4s ease;
 }
 
 .mobile-menu.open {
   max-height: 400px;
+  visibility: visible;
 }
 
 .mobile-link {
