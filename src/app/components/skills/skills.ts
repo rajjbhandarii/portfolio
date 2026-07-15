@@ -19,7 +19,7 @@ interface Skill {
 export class Skills {
   activeCategory = 'All';
 
-  constructor() {}
+  constructor() { }
 
   categories = ['All', 'Frontend', 'Backend', 'Tools'];
 
@@ -65,8 +65,16 @@ export class Skills {
       category: 'Backend',
     },
     {
+      name: 'Microservices',
+      level: 60,
+      icon: '🔧',
+      faIcon: 'fas fa-cogs',
+      color: '#6c757d',
+      category: 'Backend',
+    },
+    {
       name: 'Express.js',
-      level: 80,
+      level: 90,
       icon: '⚡',
       faIcon: 'fas fa-server',
       color: '#8b85ff',

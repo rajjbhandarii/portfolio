@@ -25,7 +25,7 @@ export class Contact {
   hasError = signal(false);
 
   contactInfo = [
-    { icon: '📧', label: 'Email', value: 'bhandariiiraj@gmail.com', href: 'mailto:raj@example.com' },
+    { icon: '📧', label: 'Email', value: 'bhandarirajjj@gmail.com', href: 'mailto:bhandarirajjj@gmail.com' },
   ];
 
   async onSubmit() {
