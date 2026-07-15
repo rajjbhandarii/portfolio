@@ -19,8 +19,8 @@ export class Home {
 
   downloadResume() {
     const link = document.createElement('a');
-    link.href = 'assets/resume.pdf';
-    link.download = 'resume.pdf';
+    link.href = '/assets/Raj_Bhandari_CV.pdf';
+    link.download = 'Raj_Bhandari_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
