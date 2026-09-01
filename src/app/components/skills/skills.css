@@ -125,11 +125,11 @@
   margin-bottom: 16px;
 }
 
-.skill-icon {
+/* .skill-icon {
   font-size: 2.2rem;
   line-height: 1;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-}
+} */
 
 .svg-icon {
   display: flex;
@@ -139,10 +139,10 @@
   height: 2.2rem;
 }
 
-.svg-icon svg {
+/* .svg-icon svg {
   width: 100%;
   height: 100%;
-}
+} */
 
 .skill-icon i,
 .skill-icon i.fa-skill-icon {
@@ -156,7 +156,15 @@
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
-.skill-icon .emoji-icon {
+.skill-icon.img {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.skill-icon .emoji-icon img {
   display: inline-flex;
   align-items: center;
   justify-content: center;

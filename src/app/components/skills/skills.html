@@ -26,10 +26,10 @@
       <div class="skill-card" [style.--accent-color]="skill.color">
         <div class="skill-card-top">
           <div class="skill-icon">
-            @if (skill.faIcon) {
+            @if(!skill.icon) {
             <i [class]="skill.faIcon + ' fa-skill-icon'" [style.color]="skill.color"></i>
             } @else {
-            <span class="emoji-icon">{{ skill.icon }}</span>
+            <span class="emoji-icon"><img [src]="skill.icon" alt="{{ skill.name }}" /></span>
             }
           </div>
           <div class="skill-meta">
@@ -40,13 +40,13 @@
 
         <div class="skill-name">{{ skill.name }}</div>
 
-        <div class="skill-progress-wrapper">
+        <!-- <div class="skill-progress-wrapper">
           <div class="skill-bar">
             <div class="skill-fill" [style.width.%]="skill.level"
               [style.background]="'linear-gradient(90deg, ' + skill.color + '99, ' + skill.color + ')'"></div>
           </div>
           <span class="skill-percent">{{ skill.level }}%</span>
-        </div>
+        </div> -->
       </div>
       }
     </div>

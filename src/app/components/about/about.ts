@@ -7,9 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './about.css'
 })
 export class About {
-  experiences = [
-    { year: '', role: '', company: '', desc: '' },
-    { year: '', role: '', company: '', desc: '' },
-    { year: '', role: '', company: '', desc: '' },
-  ];
+  // experiences = [
+  //   { year: '2026', role: 'InternShip', company: 'IBM SkillBuild', desc: ' Learning AI Fundamentals' },
+  // ];
 }
